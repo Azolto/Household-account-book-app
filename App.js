@@ -104,9 +104,9 @@ export default function App() {
           </View>
         </View>
         {/* ボタン */}
-        <View>
-          <Text>
-            追加
+        <View style={styles.memoAddButton}>
+          <Text style={styles.memoAddButtonTitle}>
+            +
           </Text>
         </View>
 
@@ -118,10 +118,28 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFDF6',
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 70,
+  },
+
+  memoAddButton: {
+    position: 'absolute',
+    bottom: 32,
+    right: 32,
+    width: 48,
+    height: 48,
+    backgroundColor: '#E3607F',
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  memoAddButtonTitle: {
+    fontSize: 32,
+    lineHeight: 32,
+    color: '#fff',
   },
 
   appbar: {
@@ -161,7 +179,7 @@ const styles = StyleSheet.create({
   },
 
   incomeAndOutgo: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     backgroundColor: '#ddd',
     // justifyContent: 'space-around',
@@ -182,10 +200,11 @@ const styles = StyleSheet.create({
   },
 
   memoList: {
-    flex: 11,
+    flex: 1,
     width: '100%',
-    paddingLeft: 15,
-    paddingRight: 15,
+    // backgroundColor: '#fff',
+    // alignSelf: 'center',
+    // justifyContent: 'flex-start',
   },
 
   memoHeader: {
@@ -193,36 +212,42 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
     alignItems: 'center',
+    backgroundColor: '#fff',
   },
 
   memoHeaderLeft: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    paddingLeft: 15,
   },
 
   memoHeaderRight: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
+    paddingRight: 15,
   },
 
   memoListitem: {
     paddingTop: 10,
     paddingBottom: 10,
     flexDirection: 'row',
+    backgroundColor: '#fff',
   },
 
   memoListItemLeft: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    paddingLeft: 15,
   },
 
   memoListitemRight: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
+    paddingRight: 15,
   },
 
 });
